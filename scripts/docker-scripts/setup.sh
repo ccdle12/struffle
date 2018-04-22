@@ -72,15 +72,15 @@ cat <<EOF > HelloWorld.sol
 pragma solidity ^0.4.18;
 
 contract HelloWorld {
-string hello;
+  string hello;
 
-function HelloWorld() {
-  hello = "Hello, World";
-}
+  function HelloWorld() {
+    hello = "Hello, World";
+  }
 
-function getMessage() returns (string) {
-  return hello;
-}
+  function getMessage() returns (string) {
+    return hello;
+  }
 }
 EOF
 
