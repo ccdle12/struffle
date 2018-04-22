@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  truffle:
+    build: ./truffle
+    volumes:
+      - ./truffle/code:/docker-truffle/code:rw
+      - ./scripts/docker-scripts:/docker-truffle/scripts:rw
+    command: ../scripts/setup.sh
+    ports:
+      - 7001:8080
+  
+  ganache:
+    build: ./ganache
+    ports:
+      - 7000:8545
