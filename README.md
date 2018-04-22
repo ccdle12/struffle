@@ -1,6 +1,6 @@
 # Truffle-Scaffold
 
-* A quick scaffold for truffle using Docker
+* A quick scaffold for Truffle using Docker
 
 ## Setup
 
@@ -20,7 +20,7 @@ docker-compose up
 ```
 
 * To create a new test
-* It's important that <name of contract> is exactly the same as the contract you are trying to test
+* It's important that the <name of contract> is exactly the same as the contract you are trying to test
 ```
 ./scripts/local-scripts/create-test.sh <name of contract>
 ```
