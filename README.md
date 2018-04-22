@@ -1,6 +1,6 @@
 # Truffle-Scaffold
 
-* A quick scaffold for truffle using Docker
+* A quick scaffold for Truffle using Docker
 
 ## Setup
 
