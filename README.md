@@ -47,6 +47,5 @@ struffle create-test <name of contract>
 ```
 
 ## WIP items
-* Use solium
 * Create an ERC20   
 * Infura capabilities
