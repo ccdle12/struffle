@@ -1,0 +1,45 @@
+#!/bin/bash
+
+function create-test() {
+    # Name of contract
+    CONTRACTNAME=$1
+
+    # Attach into docker
+    docker exec -i -t truffle_container /bin/bash -c "
+        cd ../ && ./scripts/create-test.sh ${CONTRACTNAME}
+    "
+}
+
+function deploy-test() {
+    # Network for deployment
+    NETWORK=$1
+
+    # Attach into docker
+    docker exec -i -t truffle_container /bin/bash -c "
+        cd ../ && ./scripts/deploy-test.sh ${NETWORK}
+    "
+}
+
+function deploy() {    
+    # Network for deployment
+    NETWORK=$1
+
+    # Attach into docker
+    docker exec -i -t truffle_container /bin/bash -c "
+        cd ../ && ./scripts/deploy.sh ${NETWORK}
+    "
+}
+
+function test() {
+    #Network 
+    NETWORK=$1
+
+    # Attach into docker
+    docker exec -i -t truffle_container /bin/bash -c "
+        cd ../ && ./scripts/test.sh ${NETWORK}
+    "
+}
+
+cmd="$1"
+shift
+eval "$cmd $@"

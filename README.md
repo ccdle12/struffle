@@ -1,28 +1,33 @@
 # Truffle-Scaffold
 
-* A quick scaffold for Truffle using Docker
+* A quick scaffold for Truffle in Docker
 
 ## Setup
 
-* Get an instance of ganache and truffle up an running
+### Install Struffle to local environment
+```
+./install
+```
+
+### Run Truffle and Ganache in Docker
 ```
 docker-compose up
 ```
 
-* Deploy contract
+### Deploy contracts
 ```
-./scripts/local-scripts/deploy.sh <name of network>
-```
-
-* Test contract
-```
-./scripts/local-scripts/tests.sh <name of network>
+struffle deploy
 ```
 
-* To create a new test
+### Test contracts
+```
+struffle test
+```
+
+### Create a new test
 * It's important that the <name of contract> is exactly the same as the contract you are trying to test
 ```
-./scripts/local-scripts/create-test.sh <name of contract>
+struffle create-test <name of contract>
 ```
 
 ## WIP items

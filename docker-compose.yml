@@ -2,6 +2,7 @@ version: '3'
 
 services:
   truffle:
+    container_name: truffle_container
     build: ./truffle
     volumes:
       - ./truffle/code:/docker-truffle/code:rw
@@ -11,6 +12,7 @@ services:
       - 7001:8080
   
   ganache:
+    container_name: ganache_container
     build: ./ganache
     ports:
       - 7000:8545

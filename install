@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Move struffle to bin
+sudo chmod a+x ./struffle
+sudo cp struffle /usr/local/bin/struffle
