@@ -16,7 +16,7 @@ docker-compose up
 
 ### Create a Contract, Migration File and Test
 ```
-struffle create-all-contract-files <name of contract>
+struffle create-contract <name of contract>
 ```
 
 ### Deploy contracts
