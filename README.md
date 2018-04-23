@@ -16,12 +16,17 @@ docker-compose up
 
 ### Deploy contracts
 ```
-struffle deploy
+struffle deploy <name of network>
 ```
 
 ### Test contracts
 ```
-struffle test
+struffle test <name of network>
+```
+
+### Deploy and Test
+```
+struffle deploy-test <name of network>
 ```
 
 ### Create a new test
