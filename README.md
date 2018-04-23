@@ -14,6 +14,11 @@
 docker-compose up
 ```
 
+### Create a Contract, Migration File and Test
+```
+struffle create-all-contract-files <name of contract>
+```
+
 ### Deploy contracts
 ```
 struffle deploy <name of network>
@@ -42,9 +47,6 @@ struffle create-test <name of contract>
 ```
 
 ## WIP items
-
-* Create a script for generating a contract
-* Create a contract and add to migrations
 * Use solium
 * Create an ERC20   
 * Infura capabilities

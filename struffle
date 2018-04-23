@@ -1,15 +1,6 @@
 #!/bin/bash
 
-function create-test() {
-    # Name of contract
-    CONTRACTNAME=$1
-
-    # Attach into docker
-    docker exec -i -t truffle_container /bin/bash -c "
-        cd ../ && ./scripts/create-test.sh ${CONTRACTNAME}
-    "
-}
-
+### Run functions
 function deploy-test() {
     # Network for deployment
     NETWORK=$1
@@ -40,7 +31,8 @@ function test() {
     "
 }
 
-function create-contract() {
+### Create Functions
+function private-create-contract() {
     #Contract
     CONTRACTNAME=$1
 
@@ -48,7 +40,38 @@ function create-contract() {
     docker exec -i -t truffle_container /bin/bash -c "
         cd ../ && ./scripts/create-contract.sh ${CONTRACTNAME}
     "
+}
 
+function create-migration() {
+    #Contract
+    CONTRACTNAME=$1
+
+    # Attach into docker
+    docker exec -i -t truffle_container /bin/bash -c "
+        cd ../ && ./scripts/create-migration.sh ${CONTRACTNAME}
+    "
+}
+
+function create-test() {
+    # Name of contract
+    CONTRACTNAME=$1
+
+    # Attach into docker
+    docker exec -i -t truffle_container /bin/bash -c "
+        cd ../ && ./scripts/create-test.sh ${CONTRACTNAME}
+    "
+}
+
+function create-contract() {
+    #Contract
+    CONTRACTNAME=$1
+
+    # Attach into docker
+    docker exec -i -t truffle_container /bin/bash -c "
+        cd ../ && ./scripts/create-contract.sh ${CONTRACTNAME}
+        ./scripts/create-migration.sh ${CONTRACTNAME}
+        ./scripts/create-test.sh ${CONTRACTNAME}
+    "
 }
 
 cmd="$1"
