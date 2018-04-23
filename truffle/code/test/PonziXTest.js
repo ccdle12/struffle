@@ -1,11 +1,4 @@
-#!/bin/bash
-
-# Name of contract
-CONTRACTNAME=$1
-
-cd ./code/test
-cat <<EOF > ${CONTRACTNAME}Test.js
-const ${CONTRACTNAME} = artifacts.require('${CONTRACTNAME}.sol');
+const PonziX = artifacts.require('PonziX.sol');
 
 const BigNumber = web3.BigNumber;
 
@@ -15,7 +8,7 @@ const should = require('chai')
   .should();
 
 
-contract('${CONTRACTNAME}', function(accounts) {
+contract('PonziX', function(accounts) {
   
   const deploying_account = accounts[0];
   const account1 = accounts[1];
@@ -41,12 +34,11 @@ contract('${CONTRACTNAME}', function(accounts) {
   }
   
   before(async() => {
-    this.${CONTRACTNAME} = await ${CONTRACTNAME}.deployed();
+    this.PonziX = await PonziX.deployed();
   });
 
   it("should exist", async() => {
-    await this.${CONTRACTNAME}.should.exist;
+    await this.PonziX.should.exist;
   });
 
 });
-EOF

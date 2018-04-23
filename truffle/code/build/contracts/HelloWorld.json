@@ -501,13 +501,13 @@
     "version": "0.4.23+commit.124ca40d.Emscripten.clang"
   },
   "networks": {
-    "1524473504103": {
+    "1524475138692": {
       "events": {},
       "links": {},
-      "address": "0xef5132904b1e08fbced846e31e40a3128751c6cf",
-      "transactionHash": "0x812097c37d82801e8b02b1320ccf13ba43573cf5cc822d2b5757d4acd11af4a3"
+      "address": "0xdba12c45a19f5bd0ff643c31c7b6df03cae003db",
+      "transactionHash": "0x119f1be25d3976a83f8827333cf3795d14bfb827ce68685b93d91c0c6987e522"
     }
   },
   "schemaVersion": "2.0.0",
-  "updatedAt": "2018-04-23T08:58:54.585Z"
+  "updatedAt": "2018-04-23T09:20:23.155Z"
 }

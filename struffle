@@ -40,6 +40,17 @@ function test() {
     "
 }
 
+function create-contract() {
+    #Contract
+    CONTRACTNAME=$1
+
+    # Attach into docker
+    docker exec -i -t truffle_container /bin/bash -c "
+        cd ../ && ./scripts/create-contract.sh ${CONTRACTNAME}
+    "
+
+}
+
 cmd="$1"
 shift
 eval "$cmd $@"

@@ -30,7 +30,7 @@ struffle deploy-test <name of network>
 ```
 
 ### Create a new test
-* It's important that the <name of contract> is exactly the same as the contract you are trying to test
+* It's important that the 'name of the contract' is exactly the same as the contract you are trying to test
 ```
 struffle create-test <name of contract>
 ```
@@ -44,4 +44,7 @@ struffle create-test <name of contract>
 ## WIP items
 
 * Create a script for generating a contract
+* Create a contract and add to migrations
+* Use solium
+* Create an ERC20   
 * Infura capabilities
