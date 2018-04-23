@@ -30,6 +30,12 @@ struffle test
 struffle create-test <name of contract>
 ```
 
+### Uninstall Struffle
+* Will remove struffle from local env
+```
+./uninstall
+```
+
 ## WIP items
 
 * Create a script for generating a contract
