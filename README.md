@@ -6,44 +6,44 @@
 
 ### Install Struffle to local environment
 ```
-./install
+$ ./install
 ```
 
 ### Run Truffle and Ganache in Docker
 ```
-docker-compose up
+$ docker-compose up
 ```
 
 ### Create a Contract, Migration File and Test
 ```
-struffle create-all-contract-files <name of contract>
+$ struffle create-contract <name of contract>
 ```
 
 ### Deploy contracts
 ```
-struffle deploy <name of network>
+$ struffle deploy <name of network>
 ```
 
 ### Test contracts
 ```
-struffle test <name of network>
+$ struffle test <name of network>
 ```
 
 ### Deploy and Test
 ```
-struffle deploy-test <name of network>
+$ struffle deploy-test <name of network>
 ```
 
 ### Create a new test
 * It's important that the 'name of the contract' is exactly the same as the contract you are trying to test
 ```
-struffle create-test <name of contract>
+$ struffle create-test <name of contract>
 ```
 
 ### Uninstall Struffle
 * Will remove struffle from local env
 ```
-./uninstall
+$ ./uninstall
 ```
 
 ## WIP items
